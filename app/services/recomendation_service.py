@@ -102,7 +102,7 @@ class RecommendationService:
             )
         return results
 
-    def get_user_recommendations(self, user_id: int, limit: int = 10) -> List[RecommendationSchema]:
+    def get_user_recommendations(self, user_id: int, limit: int = 10):# -> List[RecommendationSchema]:
         # Implementation to get user recommendations
         pass
 
