@@ -16,5 +16,5 @@ router = APIRouter(
 @router.post("/")
 async def register_new_user(request: schemas.RegisterUser, db: Session = Depends(get_db)):
     user_service = UserService(db)
-    new_user = user_service.register_new_user(request)
+    new_user = await user_service.register_new_user(request)
     return new_user

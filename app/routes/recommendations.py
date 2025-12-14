@@ -1,10 +1,13 @@
 from typing import List
+import asyncio
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.database.base import get_db
 from app.services.recomendation_service import RecommendationService
-from app.models.schemas import ProblemMinimal
+from app.services.llm_service import LLM_service
+from app.models.schemas import ProblemMinimal, ProblemData
+import app.database.models as db_models 
 
 router = APIRouter(
     prefix="/recommendations",
