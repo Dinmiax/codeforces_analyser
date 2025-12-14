@@ -47,6 +47,12 @@ class RecommendationService:
         ratios.sort(key=lambda x: x[1])
         return ratios[:top_n]
 
+    def rec_exists(self,rec: db_models.Recommendation) -> db_models.Recommendation:
+        found = self.db.query(db_models.Recommendation).filter(db_models.Recommendation.problem_id == rec.problem_id, db_models.Recommendation.user_id == rec.user_id).first()
+        if (found is not None):
+            self.db.refresh(found)
+        return found
+
     def recommend_by_weak_topic(self, user_id: int, limit: int = 10) -> List[ProblemMinimal]:
         totals, solveds = self._get_tag_totals_and_solved(user_id)
         if not totals:
@@ -88,8 +94,12 @@ class RecommendationService:
                 reason=reason,
                 score=0.0
             )
-            self.db.add(rec)
-            saved_recs.append(rec)
+            exists = self.rec_exists(rec)
+            if (exists is None):
+                self.db.add(rec)
+                saved_recs.append(rec)
+            else:
+                saved_recs.append(exists)
         if saved_recs:
             self.db.commit()
         results: List[ProblemMinimal] = []
@@ -205,6 +215,13 @@ class RecommendationService:
         for p, score in result:
             rec = db_models.Recommendation(user_id=user_id, problem_id=p.id, reason=f"smart:score={score:.3f}",
                                            score=float(score))
+            
+            exists = self.rec_exists(rec)
+            if (exists is None):
+                self.db.add(rec)
+                recs.append(rec)
+            else:
+                recs.append(exists)
             self.db.add(rec)
             recs.append(rec)
         if recs:
