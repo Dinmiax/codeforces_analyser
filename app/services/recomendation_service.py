@@ -138,7 +138,7 @@ class RecommendationService:
             solved = solveds.get(t, 0)
             tag_weakness[t] = 1.0 - (solved / tot) if tot > 0 else 1.0
 
-        user_rating = self._estimate_user_rating(user_id)
+        user_rating = self.estimate_user_rating(user_id)
 
         sorted_tags = sorted(tag_weakness.items(), key=lambda x: x[1], reverse=True)
         candidates = []
