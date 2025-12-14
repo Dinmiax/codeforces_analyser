@@ -3,7 +3,7 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.database.base import get_db
-from app.services.recommendation_service import RecommendationService
+from app.services.recomendation_service import RecommendationService
 from app.models.schemas import ProblemMinimal
 
 router = APIRouter(
