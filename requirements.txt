@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+passlib
+bcrypt==4.3.0
+pyjwt
+python-multipart
+psycopg2
+pydantic_settings
+requests
+aiohttp
