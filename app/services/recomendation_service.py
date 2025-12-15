@@ -47,8 +47,9 @@ class RecommendationService:
         ratios.sort(key=lambda x: x[1])
         return ratios[:top_n]
 
-    def rec_exists(self,rec: db_models.Recommendation) -> db_models.Recommendation:
-        found = self.db.query(db_models.Recommendation).filter(db_models.Recommendation.problem_id == rec.problem_id, db_models.Recommendation.user_id == rec.user_id).first()
+    def rec_exists(self, rec: db_models.Recommendation) -> db_models.Recommendation:
+        found = self.db.query(db_models.Recommendation).filter(db_models.Recommendation.problem_id == rec.problem_id,
+                                                               db_models.Recommendation.user_id == rec.user_id).first()
         if (found is not None):
             self.db.refresh(found)
         return found
@@ -130,12 +131,6 @@ class RecommendationService:
         user = self.db.query(db_models.User).filter(db_models.User.id == user_id).first()
         if not user:
             return []
-        already = {
-            r.problem_id
-            for r in self.db.query(models.Recommendation.problem_id)
-            .filter(models.Recommendation.user_id == user_id)
-            .all()
-        }
         solved_ids = self._get_user_solved_problem_ids(user_id)
         totals, solveds = self._get_tag_totals_and_solved(user_id)
         if not totals:
@@ -156,8 +151,6 @@ class RecommendationService:
         all_problems = self.db.query(db_models.Problem).all()
         for tag, weakness in sorted_tags:
             for p in all_problems:
-                if p.id in already:
-                    continue
                 if p.id in seen or p.id in solved_ids:
                     continue
                 if not p.tags:
@@ -223,7 +216,7 @@ class RecommendationService:
         for p, score in result:
             rec = db_models.Recommendation(user_id=user_id, problem_id=p.id, reason=f"smart:score={score:.3f}",
                                            score=float(score))
-            
+
             exists = self.rec_exists(rec)
             if (exists is None):
                 self.db.add(rec)
