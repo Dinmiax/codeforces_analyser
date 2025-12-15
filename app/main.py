@@ -23,7 +23,7 @@ app.include_router(auth.router)
 app.include_router(conversation.router)
 app.include_router(fact.router)
 app.include_router(topics.router)
-app.include_router(llm_eval_router)
+app.include_router(llm_eval_router.router)
 
 if __name__ == "__main__":
     logging.getLogger('passlib').setLevel(logging.ERROR)

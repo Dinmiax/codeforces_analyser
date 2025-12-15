@@ -11,7 +11,7 @@ import app.database.models as db_models
 
 router = APIRouter(
     prefix="/recommendations",
-    tags=["recommendations"]
+    tags=["Recommendations"]
 )
 
 

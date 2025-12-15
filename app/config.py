@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     CODEFORCES_API_URL: str = "https://codeforces.com/api"
 
     LLM_API_URL: str = "http://localhost:11434"
-    LLM_MODEL: str = "gemma3:4b"
+    LLM_MODEL: str = "gemma3:270m"
     #LLM_MODEL: str = "deepseek-r1:8b"
 
     # ALLOWED_HOSTS: List[str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
