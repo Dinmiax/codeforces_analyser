@@ -13,7 +13,7 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="Codeforces Tutor API",
     description="API for learning competitive programming with Codeforces",
-    version="1.0.0"
+    version="0.4.0"
 )
 
 app.include_router(recommendations.router)
