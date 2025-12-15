@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from database.base import engine, get_db, Base
 import models
 import uvicorn
-from routes import users, register, auth, conversation, recommendations
+from routes import users, register, auth, conversation, recommendations, fact, topics
 from config import settings
 
 Base.metadata.create_all(bind=engine)
@@ -21,6 +21,8 @@ app.include_router(users.router)
 app.include_router(register.router)
 app.include_router(auth.router)
 app.include_router(conversation.router)
+app.include_router(fact.router)
+app.include_router(topics.router)
 
 if __name__ == "__main__":
     logging.getLogger('passlib').setLevel(logging.ERROR)

@@ -80,16 +80,42 @@ class ProblemData:
     raw_text: str | None
 
     def __init__(self, data: Dict):
-        self.title = data["title"]
-        self.time_limit = data["time_limit"]
-        self.memory_limit = data["memory_limit"]
-        self.statement = data["statement"]
-        self.input_spec = data["input_spec"]
-        self.output_spec = data["output_spec"]
-        self.note = data["note"]
-        self.samples = data["samples"]
-        self.raw_text = data["raw_text"]
-
+        try:
+            self.title = data["title"]
+        except:
+            pass
+        try:
+            self.time_limit = data["time_limit"]
+        except:
+            pass
+        try:
+            self.memory_limit = data["memory_limit"]
+        except:
+            pass
+        try:
+            self.statement = data["statement"]
+        except:
+            pass
+        try:
+            self.input_spec = data["input_spec"]
+        except:
+            pass
+        try:
+            self.output_spec = data["output_spec"]
+        except:
+            pass
+        try:
+            self.note = data["note"]
+        except:
+            pass
+        try:
+            self.samples = data["samples"]
+        except:
+            pass
+        try:
+            self.raw_text = data["raw_text"]
+        except:
+            pass
 
 
 class ProblemMinimal(BaseModel):

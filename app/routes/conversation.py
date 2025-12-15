@@ -41,9 +41,12 @@ async def create_conversation(base_problem: schemas.FindProblem, db: Session = D
     llm_service = LLM_service(db)
     problem_parser = ProblemParser()
     
+    
     user = await user_service.get_user_by_id(current_user.id)
     problem_data = await problem_parser.get_problem(base_problem)
     conversation = await llm_service.create_conversation(user, problem_data)
+    
+        # raise HTTPException(503, "Sorry, we can't get the task")
     return conversation
 
 @router.get("/get_conversation/{id}", response_model=List[schemas.Message])

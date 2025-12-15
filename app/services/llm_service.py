@@ -100,8 +100,8 @@ class LLM_service:
             task_parts.append(f"{problem.raw_text}\n")
 
         task_block = "".join(task_parts)
-        prompt = f"""Ты — опытный преподаватель программирования, алгоритмов и структур данных. Объясни решение следующей задачи на русском языке. Объяснение должно быть пошаговым, понятным для ученика, готовящегося к олимпиадам.
-
+        prompt = f"""Ты — опытный преподаватель программирования, алгоритмов и структур данных. Объясни решение следующей задачи на русском языке. Объяснение должно быть пошаговым, понятным для ученика, готовящегося к олимпиадам."""
+        user_prompt = f"""
     **Процесс объяснения:**
     1.  **Повтори условие:** Кратко сформулируй задачу своими словами.
     2.  **Разбери ключевую идею:** Объясни основную мысль решения (какой алгоритм, структура данных или математический факт лежит в основе). Почему это применимо здесь?
@@ -119,17 +119,23 @@ class LLM_service:
 
         **Теперь, пожалуйста, приступи к объяснению, следуя инструкциям выше.**
         """
-        return prompt
+        return (prompt, user_prompt)
 
     async def create_conversation(self, user: models.User, problem: schemas.ProblemData) -> models.Conversation:
         new_chat = models.Conversation(user_id=user.id, name=f"{problem.title}")
         self.db.add(new_chat)
         self.db.commit()
         self.db.refresh(new_chat)
+        system_message_prompt, user_message_prompt = self.create_base_prompt(problem)
+
         system_message = models.Message(conversation_id=new_chat.id, role="system",
-                                        content=self.create_base_prompt(problem))
+                                        content=system_message_prompt)
+
+
         self.db.add(system_message)
+        # print(user_message_prompt)
         self.db.commit()
+        await self.send_message(user, new_chat.id, schemas.GetMessage(content=user_message_prompt))
         return new_chat
 
     async def get_conversation(self, user: models.User, conversation_id: int) -> List[models.Message] | None:
@@ -142,6 +148,8 @@ class LLM_service:
 
     async def send_message(self, user: models.User, conversation_id: int, message: schemas.GetMessage):
         messages = await(self.get_conversation(user, conversation_id))
+
+        print(messages)
 
         chat = []
         for mes in messages:

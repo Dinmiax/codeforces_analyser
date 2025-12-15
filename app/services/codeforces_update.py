@@ -504,7 +504,8 @@ class ProblemParser:
                                 'output': output_text
                             })
 
-            problem_data['raw_text'] = parser.get_raw_text()
+            # Эта поебень сломалась
+            # problem_data['raw_text'] = parser.get_raw_text()
             if problem_data['input_spec'] and problem_data['input_spec'][0]:
                 problem_data['input_spec'][0] = re.sub(r'^Input[:\s]*', '', problem_data['input_spec'][0],
                                                        flags=re.IGNORECASE)
