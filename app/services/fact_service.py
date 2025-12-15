@@ -129,3 +129,158 @@ class FactsService:
         for ln in cleaned[:20]:
             out.append({"title": None, "year": None, "person": None, "description": ln, "source": None})
         return out
+
+    async def verify_fact(self, fact: Dict, timeout_sec: int = 8, retry: int = 1) -> Dict:
+        title = fact.get("title") or ""
+        year = fact.get("year")
+        person = fact.get("person") or ""
+        desc = fact.get("description") or ""
+        source_hint = fact.get("source") or ""
+        fact_brief = f"Title: {title}\nYear: {year}\nPerson: {person}\nDescription: {desc}\nSourceHint: {source_hint}"
+        system_msg = {
+            "role": "system",
+            "content": "Ты — проверяющий факты об истории математики, алгоритмов и структур данных. Отвечай кратко и точно."
+        }
+        user_prompt = (
+            "Проверь, пожалуйста, корректность следующего факта. "
+            "Ответь ТОЛЬКО JSON-объектом в формате:\n"
+            '{"verified": true|false|null, "confidence": 0.0-1.0, "evidence": "короткая строка/URL or null"}\n'
+            "- verified = true если факт подтверждается надежными источниками;\n"
+            "- verified = false если фактическая ошибка (имя/год/событие неверны);\n"
+            "- verified = null если модель не уверена или нет источника.\n"
+            "- confidence — число от 0 до 1, 1 — полностью уверена.\n"
+            "Никаких дополнительных слов, только JSON.\n\n"
+            f"Факт:\n{fact_brief}\n"
+        )
+
+        messages = [system_msg, {"role": "user", "content": user_prompt}]
+        raw = ""
+        parsed = None
+        attempts = 0
+        while attempts <= retry:
+            attempts += 1
+            try:
+                raw = await asyncio.wait_for(self.llm.send_by_chat_wraper(messages, stream=False), timeout=timeout_sec)
+            except Exception as e:
+                fact.update({
+                    "verified": None,
+                    "confidence": None,
+                    "evidence": f"LLM error: {e}",
+                    "checked_at": datetime.datetime.utcnow().isoformat() + "Z"
+                })
+                return fact
+
+            parsed = self._parse_json_object(raw)
+            if parsed is not None:
+                break
+            messages = [
+                system_msg,
+                {"role": "user",
+                 "content": "Ты должен вернуть ТОЛЬКО JSON в указанном формате. Пожалуйста, верни корректный JSON для проверки выше.\n\nИсходный ответ:\n" + raw}
+            ]
+        if parsed is None:
+            verified = None
+            confidence = None
+            evidence = None
+            if raw:
+                if re.search(r"\\btrue\\b", raw, flags=re.IGNORECASE):
+                    verified = True
+                elif re.search(r"\\bfalse\\b", raw, flags=re.IGNORECASE):
+                    verified = False
+                num = re.search(r"0(?:\\.\\d+)?|1(?:\\.0+)?|0?\\.\\d+", raw)
+                if num:
+                    try:
+                        confidence = float(num.group(0))
+                        if confidence > 1:
+                            confidence = confidence / 100.0 if confidence <= 100 else None
+                    except Exception:
+                        confidence = None
+                evidence = raw.strip()[:200]
+            fact.update({
+                "verified": verified,
+                "confidence": confidence,
+                "evidence": evidence,
+                "checked_at": datetime.datetime.utcnow().isoformat() + "Z",
+                "raw_verification": raw
+            })
+            return fact
+        verified = parsed.get("verified")
+        confidence = parsed.get("confidence")
+        evidence = parsed.get("evidence") or parsed.get("source") or None
+        if isinstance(verified, str):
+            if verified.lower() in ("true", "yes", "1"):
+                verified = True
+            elif verified.lower() in ("false", "no", "0"):
+                verified = False
+            else:
+                verified = None
+        if isinstance(confidence, (int, float)):
+            try:
+                confidence = float(confidence)
+                if confidence < 0:
+                    confidence = 0.0
+                if confidence > 1:
+                    if confidence <= 100:
+                        confidence = round(confidence / 100.0, 3)
+                    else:
+                        confidence = 1.0
+            except Exception:
+                confidence = None
+        else:
+            confidence = None
+
+        fact.update({
+            "verified": bool(verified) if isinstance(verified, bool) else None,
+            "confidence": confidence,
+            "evidence": evidence,
+            "checked_at": datetime.datetime.utcnow().isoformat() + "Z",
+            "raw_verification": raw
+        })
+        return fact
+
+    async def verify_facts_batch(self, facts: List[Dict], concurrency: int = 3) -> List[Dict]:
+        sem = asyncio.Semaphore(concurrency)
+
+        async def worker(f):
+            async with sem:
+                try:
+                    return await self.verify_fact(f)
+                except Exception as e:
+                    f.update({
+                        "verified": None,
+                        "confidence": None,
+                        "evidence": f"internal error: {e}",
+                        "checked_at": datetime.datetime.utcnow().isoformat() + "Z"
+                    })
+                    return f
+
+        tasks = [worker(fact) for fact in facts]
+        results = await asyncio.gather(*tasks, return_exceptions=False)
+        return results
+
+    def _parse_json_object(self, text: str) -> Optional[Dict]:
+        if not text or not isinstance(text, str):
+            return None
+        try:
+            obj = json.loads(text.strip())
+            if isinstance(obj, dict):
+                return obj
+        except Exception:
+            pass
+        m = re.search(r"\{[\s\S]*\}", text)
+        if m:
+            try:
+                obj = json.loads(m.group(0))
+                if isinstance(obj, dict):
+                    return obj
+            except Exception:
+                s = m.group(0)
+                last = s.rfind("}")
+                if last != -1:
+                    try:
+                        obj = json.loads(s[: last + 1])
+                        if isinstance(obj, dict):
+                            return obj
+                    except Exception:
+                        pass
+        return None
