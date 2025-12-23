@@ -1,0 +1,1602 @@
+{
+  "parser": [
+    {
+      "id": "parser_1",
+      "name": "Watermelon (4A)",
+      "problem_id": "4-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_2",
+      "name": "Team (231A)",
+      "problem_id": "231-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_3",
+      "name": "Way Too Long Words (71A)",
+      "problem_id": "71-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_4",
+      "name": "Theatre Square (1A)",
+      "problem_id": "1-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_5",
+      "name": "String Task (118A)",
+      "problem_id": "118-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_6",
+      "name": "Beautiful Matrix (263A)",
+      "problem_id": "263-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_7",
+      "name": "Queue at the School (266B)",
+      "problem_id": "266-B",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_8",
+      "name": "Borze (32B)",
+      "problem_id": "32-B",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_9",
+      "name": "Beautiful Year (271A)",
+      "problem_id": "271-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_10",
+      "name": "Lights Out (275A)",
+      "problem_id": "275-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_11",
+      "name": "Chat room (58A)",
+      "problem_id": "58-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_12",
+      "name": "Twins (160A)",
+      "problem_id": "160-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_13",
+      "name": "Puzzles (337A)",
+      "problem_id": "337-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_14",
+      "name": "Expression (479A)",
+      "problem_id": "479-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_15",
+      "name": "Fancy Fence (270A)",
+      "problem_id": "270-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_16",
+      "name": "HQ9+ (133A)",
+      "problem_id": "133-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_17",
+      "name": "Even Odds (318A)",
+      "problem_id": "318-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_18",
+      "name": "Dubstep (208A)",
+      "problem_id": "208-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_19",
+      "name": "Football (96A)",
+      "problem_id": "96-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_20",
+      "name": "System of Equations (214A)",
+      "problem_id": "214-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_21",
+      "name": "Business trip (149A)",
+      "problem_id": "149-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_22",
+      "name": "Arrival of the General (144A)",
+      "problem_id": "144-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_23",
+      "name": "Perfect Permutation (233A)",
+      "problem_id": "233-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_24",
+      "name": "Mashmokh and Lights (415A)",
+      "problem_id": "415-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_25",
+      "name": "Gravity Flip (405A)",
+      "problem_id": "405-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_26",
+      "name": "Little Elephant and Function (221A)",
+      "problem_id": "221-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_27",
+      "name": "Petya and Strings (112A)",
+      "problem_id": "112-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_28",
+      "name": "Helpful Maths (339A)",
+      "problem_id": "339-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_29",
+      "name": "Xenia and Ringroad (339B)",
+      "problem_id": "339-B",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_30",
+      "name": "Capitalize Word (281A)",
+      "problem_id": "281-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_31",
+      "name": "Lucky Division (122A)",
+      "problem_id": "122-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_32",
+      "name": "Tram (116A)",
+      "problem_id": "116-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_33",
+      "name": "I_love_%username% (155A)",
+      "problem_id": "155-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_34",
+      "name": "Translation (41A)",
+      "problem_id": "41-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_35",
+      "name": "Games (268A)",
+      "problem_id": "268-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_36",
+      "name": "Young Physicist (69A)",
+      "problem_id": "69-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_37",
+      "name": "Present from Lena (118B)",
+      "problem_id": "118-B",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_38",
+      "name": "Stones on the Table (266A)",
+      "problem_id": "266-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_39",
+      "name": "Bit++ (282A)",
+      "problem_id": "282-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_40",
+      "name": "Word (59A)",
+      "problem_id": "59-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_41",
+      "name": "Nearly Lucky Number (110A)",
+      "problem_id": "110-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_42",
+      "name": "Petya and Java (66A)",
+      "problem_id": "66-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_43",
+      "name": "Soft Drinking (151A)",
+      "problem_id": "151-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_44",
+      "name": "Dreamoon and Stairs (476A)",
+      "problem_id": "476-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_45",
+      "name": "Caisa and Pylons (463A)",
+      "problem_id": "463-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_46",
+      "name": "Fox And Snake (510A)",
+      "problem_id": "510-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_47",
+      "name": "Panoramix's Prediction (80A)",
+      "problem_id": "80-A",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_48",
+      "name": "Усложненная задача (1C)",
+      "problem_id": "1-C",
+      "expected": {
+        "success": true,
+        "has_tests": true,
+        "min_tests": 1
+      }
+    },
+    {
+      "id": "parser_49",
+      "name": "Некорректный ID 1",
+      "problem_id": "999999-Z",
+      "expected": {
+        "success": false
+      }
+    },
+    {
+      "id": "parser_50",
+      "name": "Некорректный ID 2",
+      "problem_id": "abc-xyz",
+      "expected": {
+        "success": false
+      }
+    }
+  ],
+  "translation": [
+    {
+      "id": "trans_1",
+      "name": "Watermelon (4A) - Русский",
+      "query": "Переведи задачу https://codeforces.com/problemset/problem/4/A",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_2",
+      "name": "Watermelon (4A) - Английский",
+      "query": "Переведи задачу 4A на английский",
+      "parameters": {
+        "target_language": "en"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_3",
+      "name": "Way Too Long Words (71A)",
+      "query": "переведи задачу 71A",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.6
+      }
+    },
+    {
+      "id": "trans_4",
+      "name": "Team (231A) - Полный перевод",
+      "query": "Полный перевод задачи 231A",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.8
+      }
+    },
+    {
+      "id": "trans_5",
+      "name": "Theatre Square (1A)",
+      "query": "переведи задачу 1A на русский",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_6",
+      "name": "String Task (118A)",
+      "query": "переведи задачу 118A",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.6
+      }
+    },
+    {
+      "id": "trans_7",
+      "name": "Beautiful Matrix (263A)",
+      "query": "переведи задачу про матрицу 263A",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_8",
+      "name": "С переводом формул (1C)",
+      "query": "переведи задачу с математикой 1C",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.6
+      }
+    },
+    {
+      "id": "trans_9",
+      "name": "Простые задачи - несколько",
+      "query": "переведи задачи 4A, 71A, 231A",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.5
+      }
+    },
+    {
+      "id": "trans_10",
+      "name": "Translation с сохранением формул",
+      "query": "переведи задачу с математическими формулами",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_11",
+      "name": "Английский -> Русский",
+      "query": "translate problem 4A to russian",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_12",
+      "name": "Русский -> Английский",
+      "query": "translate russian problem to english",
+      "parameters": {
+        "target_language": "en"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_13",
+      "name": "Полный перевод с примечаниями",
+      "query": "полный перевод задачи с примечаниями",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.8
+      }
+    },
+    {
+      "id": "trans_14",
+      "name": "Перевод с анализом качества",
+      "query": "переведи задачу и проанализируй качество",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "has_quality_analysis": true
+      }
+    },
+    {
+      "id": "trans_15",
+      "name": "Перевод сложной задачи",
+      "query": "переведи сложную задачу с Codeforces",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.5
+      }
+    },
+    {
+      "id": "trans_16",
+      "name": "Графовая задача перевод",
+      "query": "переведи задачу про графы",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.6
+      }
+    },
+    {
+      "id": "trans_17",
+      "name": "DP задача перевод",
+      "query": "переведи задачу по динамическому программированию",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.6
+      }
+    },
+    {
+      "id": "trans_18",
+      "name": "Математическая задача перевод",
+      "query": "переведи математическую задачу",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_19",
+      "name": "Жадные алгоритмы перевод",
+      "query": "переведи задачу на жадные алгоритмы",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.6
+      }
+    },
+    {
+      "id": "trans_20",
+      "name": "Задача на строки перевод",
+      "query": "переведи задачу на работу со строками",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_21",
+      "name": "Перевод с URL",
+      "query": "https://codeforces.com/problemset/problem/4/A переведи",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_22",
+      "name": "Перевод без явного языка",
+      "query": "переведи задачу 4A",
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.6
+      }
+    },
+    {
+      "id": "trans_23",
+      "name": "Мультиязычный перевод",
+      "query": "переведи на английский и русский",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_24",
+      "name": "Перевод с контекстом",
+      "query": "переведи условие задачи полностью",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.8
+      }
+    },
+    {
+      "id": "trans_25",
+      "name": "Технический перевод",
+      "query": "технический перевод задачи программирования",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_26",
+      "name": "Некорректный URL 1",
+      "query": "переведи задачу https://codeforces.com/problemset/problem/999999/Z",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": false
+      }
+    },
+    {
+      "id": "trans_27",
+      "name": "Некорректный URL 2",
+      "query": "переведи задачу https://example.com",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": false
+      }
+    },
+    {
+      "id": "trans_28",
+      "name": "Пустой запрос",
+      "query": "",
+      "expected": {
+        "success": false
+      }
+    },
+    {
+      "id": "trans_29",
+      "name": "Неподдерживаемый язык",
+      "query": "переведи задачу на французский",
+      "parameters": {
+        "target_language": "fr"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": false
+      }
+    },
+    {
+      "id": "trans_30",
+      "name": "Длинный запрос",
+      "query": "переведи пожалуйста задачу номер 4A с codeforces которая про арбуз и четность на русский язык с сохранением всех математических обозначений и технических терминов",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.7
+      }
+    },
+    {
+      "id": "trans_31",
+      "name": "Перевод с разными форматами",
+      "query": "переведи задачу 4-A, 71A, 231-A",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_32",
+      "name": "Перевод для обучения",
+      "query": "переведи задачу для изучения программирования",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_33",
+      "name": "С сохранением переменных",
+      "query": "переведи задачу сохрани имена переменных",
+      "parameters": {
+        "target_language": "ru"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.8
+      }
+    },
+    {
+      "id": "trans_34",
+      "name": "Быстрый перевод",
+      "query": "quick translate 4A",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_35",
+      "name": "Детальный перевод",
+      "query": "детальный перевод всей задачи",
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.8
+      }
+    },
+    {
+      "id": "trans_36",
+      "name": "Перевод тестовых случаев",
+      "query": "переведи задачу с тестовыми примерами",
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "has_tests": true
+      }
+    },
+    {
+      "id": "trans_37",
+      "name": "Академический перевод",
+      "query": "академический перевод задачи",
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.8
+      }
+    },
+    {
+      "id": "trans_38",
+      "name": "Перевод для соревнования",
+      "query": "переведи задачу для соревнования",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_39",
+      "name": "Мультизапрос перевод",
+      "query": "translate 4A, 71A, 231A to russian",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_40",
+      "name": "Перевод с оценкой",
+      "query": "переведи и оцени качество перевода",
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "has_quality_analysis": true
+      }
+    },
+    {
+      "id": "trans_41",
+      "name": "Русскоязычный запрос",
+      "query": "переведи арбуз задачу",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_42",
+      "name": "Англоязычный запрос",
+      "query": "translate watermelon problem",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_43",
+      "name": "Смешанный запрос",
+      "query": "translate задача 4A на русский",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_44",
+      "name": "Короткий запрос",
+      "query": "4A translate",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_45",
+      "name": "Запрос с параметрами",
+      "query": "переведи задачу",
+      "parameters": {
+        "target_language": "ru",
+        "problem_id": "4A"
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_46",
+      "name": "Комплексный перевод",
+      "query": "переведи задачу полностью с условием, входными и выходными данными",
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "min_quality": 0.8
+      }
+    },
+    {
+      "id": "trans_47",
+      "name": "Перевод для начинающих",
+      "query": "переведи простую задачу для начинающих",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_48",
+      "name": "Перевод для экспертов",
+      "query": "переведи сложную задачу для экспертов",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_49",
+      "name": "Автоматический перевод",
+      "query": "автоперевод задачи с codeforces",
+      "expected": {
+        "success": true,
+        "has_translation": true
+      }
+    },
+    {
+      "id": "trans_50",
+      "name": "Финал - комплексный тест",
+      "query": "переведи задачу 4A на русский язык с сохранением всех технических деталей, математических формул и оценкой качества перевода",
+      "parameters": {
+        "target_language": "ru",
+        "full_translation": true
+      },
+      "expected": {
+        "success": true,
+        "has_translation": true,
+        "has_quality_analysis": true,
+        "min_quality": 0.7
+      }
+    }
+  ],
+  "contest": [
+    {
+      "id": "contest_1",
+      "name": "Контест по графам для начинающих",
+      "query": "Создай контест по графам для начинающих",
+      "parameters": {
+        "difficulty": 1,
+        "problem_count": 5
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 3,
+        "topic": "graphs"
+      }
+    },
+    {
+      "id": "contest_2",
+      "name": "Контест по ДП средней сложности",
+      "query": "Контест по динамическому программированию",
+      "parameters": {
+        "difficulty": 3,
+        "topic": "dp",
+        "problem_count": 6
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 4,
+        "topic": "dp"
+      }
+    },
+    {
+      "id": "contest_3",
+      "name": "Подготовка к Div2",
+      "query": "Подбери задачи для подготовки к Div2",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_4",
+      "name": "Математические задачи",
+      "query": "Задачи по математике для продвинутых",
+      "parameters": {
+        "difficulty": 4,
+        "topic": "math",
+        "problem_count": 5
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 4,
+        "topic": "math"
+      }
+    },
+    {
+      "id": "contest_5",
+      "name": "Жадные алгоритмы",
+      "query": "контест по жадным алгоритмам",
+      "parameters": {
+        "topic": "greedy"
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 3,
+        "topic": "greedy"
+      }
+    },
+    {
+      "id": "contest_6",
+      "name": "Реализация задач",
+      "query": "задачи на реализацию",
+      "parameters": {
+        "topic": "implementation"
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_7",
+      "name": "Строковые алгоритмы",
+      "query": "контест по работе со строками",
+      "parameters": {
+        "topic": "strings"
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 3
+      }
+    },
+    {
+      "id": "contest_8",
+      "name": "Деревья и графы",
+      "query": "задачи на деревья и графы",
+      "parameters": {
+        "topic": "trees"
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 3
+      }
+    },
+    {
+      "id": "contest_9",
+      "name": "Бинарный поиск",
+      "query": "контест по бинарному поиску",
+      "parameters": {
+        "topic": "binary_search"
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 3
+      }
+    },
+    {
+      "id": "contest_10",
+      "name": "Структуры данных",
+      "query": "задачи на структуры данных",
+      "parameters": {
+        "topic": "data_structures"
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_11",
+      "name": "Для новичков",
+      "query": "простые задачи для новичков",
+      "parameters": {
+        "difficulty": 1
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_12",
+      "name": "Для экспертов",
+      "query": "сложные задачи для экспертов",
+      "parameters": {
+        "difficulty": 5
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_13",
+      "name": "Средний уровень",
+      "query": "задачи среднего уровня сложности",
+      "parameters": {
+        "difficulty": 3
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_13",
+      "name": "Смешанные темы",
+      "query": "контест из разных тем",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_14",
+      "name": "Короткий контест",
+      "query": "короткий контест из 3 задач",
+      "parameters": {
+        "problem_count": 3
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 2
+      }
+    },
+    {
+      "id": "contest_15",
+      "name": "Длинный контест",
+      "query": "длинный контест из 8 задач",
+      "parameters": {
+        "problem_count": 8
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 6
+      }
+    },
+    {
+      "id": "contest_16",
+      "name": "С анализом релевантности",
+      "query": "контест с анализом релевантности",
+      "expected": {
+        "success": true,
+        "min_problems": 4,
+        "has_analysis": true
+      }
+    },
+    {
+      "id": "contest_17",
+      "name": "С реальными задачами",
+      "query": "контест из реальных задач codeforces",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_18",
+      "name": "С последовательной сложностью",
+      "query": "контест с прогрессией сложности",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_19",
+      "name": "Для тренировки",
+      "query": "контест для тренировки",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_20",
+      "name": "Для соревнования",
+      "query": "контест для соревнования",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_21",
+      "name": "Тематический контест",
+      "query": "тематический контест",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_22",
+      "name": "Англоязычный запрос",
+      "query": "create contest about graphs",
+      "parameters": {
+        "topic": "graphs"
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 3
+      }
+    },
+    {
+      "id": "contest_23",
+      "name": "Специфичная тема",
+      "query": "контест по геометрии",
+      "expected": {
+        "success": true,
+        "min_problems": 3
+      }
+    },
+    {
+      "id": "contest_24",
+      "name": "Разминочный контест",
+      "query": "разминочный контест",
+      "expected": {
+        "success": true,
+        "min_problems": 3
+      }
+    },
+    {
+      "id": "contest_25",
+      "name": "Контест с ограничениями",
+      "query": "контест по времени выполнения",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_26",
+      "name": "Для подготовки к интервью",
+      "query": "контест для подготовки к интервью",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_27",
+      "name": "С фокусом на алгоритмы",
+      "query": "контест по алгоритмам",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_28",
+      "name": "С фокусом на математику",
+      "query": "математический контест",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_29",
+      "name": "Балансированный контест",
+      "query": "сбалансированный контест",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_30",
+      "name": "Интенсивный контест",
+      "query": "интенсивный контест",
+      "expected": {
+        "success": true,
+        "min_problems": 6
+      }
+    },
+    {
+      "id": "contest_31",
+      "name": "Образовательный контест",
+      "query": "образовательный контест",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_32",
+      "name": "Контест с подсказками",
+      "query": "контест с подсказками к задачам",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_33",
+      "name": "По конкретному запросу",
+      "query": "подбери задачи как в Div2 A,B,C",
+      "expected": {
+        "success": true,
+        "min_problems": 3
+      }
+    },
+    {
+      "id": "contest_34",
+      "name": "Для командной работы",
+      "query": "контест для командной работы",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_35",
+      "name": "С временными метками",
+      "query": "контест с оценкой времени решения",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_36",
+      "name": "Контест с рейтингами",
+      "query": "контест с задачами определенного рейтинга",
+      "parameters": {
+        "difficulty": 3
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_37",
+      "name": "Адаптивный контест",
+      "query": "адаптивный контест под уровень",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_38",
+      "name": "С элементами обучения",
+      "query": "обучающий контест",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_39",
+      "name": "Для повторения",
+      "query": "контест для повторения материала",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_40",
+      "name": "С фокусом на скорость",
+      "query": "контест на скорость решения",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_41",
+      "name": "С фокусом на точность",
+      "query": "контест на точность решения",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_42",
+      "name": "Комбинированный",
+      "query": "комбинированный контест по разным темам",
+      "expected": {
+        "success": true,
+        "min_problems": 6
+      }
+    },
+    {
+      "id": "contest_43",
+      "name": "Специализированный",
+      "query": "специализированный контест",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_44",
+      "name": "Для развития навыков",
+      "query": "контест для развития навыков программирования",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_45",
+      "name": "С элементами исследования",
+      "query": "исследовательский контест",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_46",
+      "name": "Контест-симулятор",
+      "query": "контест-симулятор соревнования",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_47",
+      "name": "С прогрессивной сложностью",
+      "query": "контест с прогрессивной сложностью задач",
+      "expected": {
+        "success": true,
+        "min_problems": 5
+      }
+    },
+    {
+      "id": "contest_48",
+      "name": "Для всех уровней",
+      "query": "контест для всех уровней подготовки",
+      "expected": {
+        "success": true,
+        "min_problems": 6
+      }
+    },
+    {
+      "id": "contest_49",
+      "name": "С фокусом на оптимизацию",
+      "query": "контест по оптимизации кода",
+      "expected": {
+        "success": true,
+        "min_problems": 4
+      }
+    },
+    {
+      "id": "contest_50",
+      "name": "Финал - комплексный контест",
+      "query": "создай полноценный контест из 6 задач разной сложности и тем для подготовки к соревнованиям по программированию с анализом релевантности и рекомендациями",
+      "parameters": {
+        "problem_count": 6,
+        "difficulty": 3
+      },
+      "expected": {
+        "success": true,
+        "min_problems": 5,
+        "has_analysis": true,
+        "has_recommendations": true
+      }
+    }
+  ]
+}
